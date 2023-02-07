@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../public/temp/head") %>
+</head>
+<body>
+    <%- include("../public/temp/nav") %>
+    <div class="forms">
+    <form action="/register" method="POST" class="needValidation" novalidate>
+            <h2>Rejestracja</h2>
+            <label for="login">Login:</label>
+            <input type="text" class="form-control mb-4" id="login" name="login" required>
+            <label for="haslo">Hasło:</label>
+            <input type="password" class="form-control mb-4" id="haslo" name="password" required>
+            <button class="btn btn-success mb-2">Rejestracja</button>
+    </form>
+    <a href="/login">Wróć do logowania</a>
+    </div>
+    <script>
+        (() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needValidation')
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => 
+      {
+        if (!form.checkValidity()) 
+        {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+    </script>
+</body>
+</html>

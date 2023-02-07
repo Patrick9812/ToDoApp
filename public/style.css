@@ -1,0 +1,372 @@
+:root
+{
+    --suc: #18c339;
+    --time: #f4900b;
+    --overtime: #f11b0e;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+.navbar
+{
+    background-color: black;
+    position: fixed;
+    top: 0;
+}
+.navbar .navbar-brand
+{
+    color: white;
+}
+.navbar .navbar-brand:hover
+{
+    color: white
+}
+.navbar .navbar-link.active
+{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p
+{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+.forms
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+}
+form
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.logout
+{
+    width: 20%;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: row;
+}
+button
+{
+    border: none;
+    background: none;
+    color: white;
+}
+main
+{
+    width: 100%;
+    margin-left: auto;
+    height: auto;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    margin-top: 1.5rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+main .toDoList h3
+{
+    font-size: 1.4rem;
+    padding-top: 8px;
+}
+.toDoList
+{
+    height: auto;
+    width: 20%;
+    background-color: #e7e7e6;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding-bottom: 0.7rem;
+}
+.boxForms
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.box
+{
+    background-color: white;
+    width: 96%;
+    height: 5rem;
+    margin-top: 0.4rem;
+    border-radius: 7px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 10px 0 10px 5px;
+}
+.btn-primary
+{
+    width: 96%;
+    margin: 10px 0;
+}
+.addTask
+{
+    position: fixed;
+    top: 96vh;
+    height: 4vh;
+    width: 100vw;
+}
+.addTask button
+{
+    height: 4vh;
+    border-radius: 0;
+}
+.dataBox
+{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.abc
+{
+    color: black;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    text-decoration: none;
+}
+.abc:hover
+{
+    color: black;
+}
+.box form
+{
+    height: auto;
+    width: auto;
+    margin: 0;
+    height: 100%;
+    width: 10%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box button
+{
+    width: 100%;
+    padding: 1px 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+.dateCheckfalse
+{
+    height: 40%;
+    font-size: 1rem;
+    background-color: #a1120b;
+    width: 60%;
+    display: flex;
+    cursor: default;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dateChecktrue
+{
+    height: 40%;
+    font-size: 1rem;
+    background-color: #d36114;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: default;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dateChecknone
+{
+    height: 40%;
+    font-size: 1rem;
+    background-color: #20a81b;
+    width: 60%;
+    display: flex;
+    cursor: default;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dataCheck span
+{
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid white;
+}
+.legendaOff
+{
+    width: 12%;
+    margin-top: 0;
+    top: 5.8vh;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90.2vh;
+    padding-left: 10px;
+    transform: translateX(-100%);
+    background-color: #1F55A8;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.legendaOn
+{
+    width: 12%;
+    z-index: 3;
+    margin-top: 0;
+    top: 5.8vh;
+    flex-direction: column;
+    display: flex;
+    position: fixed;
+    
+    transform: translateX(0);
+    justify-content: center;
+    align-items: center;
+    height: 90.2vh;
+    background-color: #1F55A8;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+.changer
+{
+    width: 4%;
+    height: 40px;
+    position: fixed;
+    top: 30%;
+    transform: translateX(-15px);
+    background-color: #ffffff;
+    border: 3px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+    align-items: center;
+    font-size: 2rem;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.changer:hover
+{
+    transform: translateX(-5px);
+    transition: all 0.3s ease-in-out;
+}
+.mainv2
+{
+    width: 88%;
+    margin-left: auto;
+    height: auto;
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+}
+.closeButton
+{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.l1
+{
+    width: 100%;
+    height: 3.5rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:10px 0;
+}
+#green
+{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #20a81b;
+    width: 20px;
+    height:20px;
+}
+#orange
+{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #d36114;
+    width: 20px;
+    height:20px;
+}
+#red
+{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #a1120b;
+    width: 20px;
+    height:20px;
+}
+#black
+{
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    align-items: center;
+    padding-left: 10px;
+    background-color: #000000;
+    width: 20px;
+    height:20px;
+}
